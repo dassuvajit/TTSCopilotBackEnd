@@ -68,7 +68,6 @@ def check_update(current_user=Depends(get_current_user)):
         print("🔥 Error in /check-update:", e)
         raise HTTPException(status_code=500, detail="Something went wrong")
 
-
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8000)
